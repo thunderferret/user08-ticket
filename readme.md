@@ -158,7 +158,7 @@
 
 ![image](6.png)
 ### 기능적/비기능적 요구사항을 커버하는지 검증
-
+링크 : http://www.msaez.io/#/storming/WpY4xioLpHPrZpRPBibQCIH6sv53/75cdb8abd599ef505adbe4df05122d25
 ![image](93.png)
 
     - (ok) 주최사가 티켓을 등록한다.
