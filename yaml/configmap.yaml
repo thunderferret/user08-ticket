@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myticket-config
+  namespace: myticket
+data:
+  api.url.payment: http://pay:8080
+  notification.prefix: Hello

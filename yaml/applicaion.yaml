@@ -1,0 +1,12 @@
+datasource:
+  url: jdbc:mysql://mysql-svc:3306/${DB_NAME}?useSSL=false
+  username: ${DB_USERNAME}
+  password: ${DB_PASSWORD}
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+    databasePlatform: "org.hibernate.dialect.MySQL5InnoDBDialect"
