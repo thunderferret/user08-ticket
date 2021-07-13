@@ -572,9 +572,26 @@ datasource:
 
 ![image](8.png)
 
+```
+# MySql Server 동작 중
+
+NAME                              READY   STATUS    RESTARTS   AGE
+pod/alarm-6c8f88cf6-sd5w8         1/2     Running   53         4h7m
+pod/book-dfb68974-pz2dz           2/2     Running   0          10h
+pod/book-mysql-797868bd8b-rdnzg   2/2     Running   1          5h7m
+pod/gateway-59d958698c-h6h7s      1/1     Running   27         18h
+pod/mypage-7478db866b-vjkvz       1/1     Running   28         18h
+pod/pay-5996ffc64c-lpm4r          2/2     Running   0          69m
+pod/siege                         1/1     Running   0          18h
+pod/ticket-7448fdb5fc-fx7ll       2/2     Running   0          70m
+
+```
+
 ## 동기식 호출 과 Fallback 처리
 
-분석단계에서의 조건 중 하나로 예매(book)->결제(pay) 간의 호출은 동기식 일관성을 유지하는 트랜잭션으로 처리하기로 하였다. 호출 프로토콜은 이미 앞서 Rest Repository 에 의해 노출되어있는 REST 서비스를 FeignClient 를 이용하여 호출하도록 한다.
+분석단계에서의 조건 중 하나로 예매(book)->결제(pay) 간의 호출은 동기식 일관성을 유지하는 트랜잭션으로 처리하기로 하였다.
+
+호출 프로토콜은 이미 앞서 Rest Repository 에 의해 노출되어있는 REST 서비스를 FeignClient 를 이용하여 호출하도록 한다.
 
 - 결제 서비스를 호출하기 위하여 Stub과 (FeignClient) 를 이용하여 Service 대행 인터페이스 (Proxy) 를 구현
 
@@ -598,6 +615,7 @@ public interface PaymentService {
 ```
 
 - 예매을 받은 직후(@PostPersist) 결제를 요청하도록 처리
+
 ```
     package com.example.rumybook;
     import javax.persistence.*;
