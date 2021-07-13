@@ -159,7 +159,7 @@
 ![image](6.png)
 ### 기능적/비기능적 요구사항을 커버하는지 검증
 
-![image](https://github.com/juwarny/example-hotel-books/blob/master/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-06-04%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%207.29.59.png)
+![image](93.png)
 
     - (ok) 주최사가 티켓을 등록한다.
     - (ok) 주최사가 티켓을 삭제한다.
@@ -302,7 +302,7 @@ myticket          Active   13h
 
 ```
 
-```aidl
+```
 Name:         myticket
 Labels:       istio-injection=enabled
 Annotations:  <none>
